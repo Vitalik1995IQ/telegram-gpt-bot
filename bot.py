@@ -32,3 +32,6 @@ async def handle_voice(update: Update, context: ContextTypes.DEFAULT_TYPE):
 app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
 app.add_handler(MessageHandler(filters.VOICE, handle_voice))
 app.run_polling()
+if name == 'main':
+    print("Bot started successfully")
+    app.run_polling()
